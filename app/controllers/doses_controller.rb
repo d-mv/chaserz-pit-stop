@@ -8,6 +8,16 @@ class DosesController < ApplicationController
     @ingredients = Ingredient.all
   end
 
+  def show
+
+  end
+
+  def destroy
+    dose = Dose.find(params[:id])
+    dose.destroy
+    redirect_back fallback_location: @cocktail
+  end
+
   def create
     dose = Dose.new(dose_params)
     dose.cocktail_id = params[:cocktail_id]

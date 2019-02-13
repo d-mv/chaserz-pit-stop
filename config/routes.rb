@@ -16,11 +16,11 @@ Rails.application.routes.draw do
   #     collection do
   #     end
   #   end
-root to: 'cocktails#index'
+  root to: 'cocktails#index'
   resources :cocktails do
-    resources :doses do
-      resources :ingredients do
-      end
+    resources :doses, only: %i[new creat] do
     end
   end
+  resources :ingredients
+  resources :doses, only: %i[destroy show edit delete]
 end

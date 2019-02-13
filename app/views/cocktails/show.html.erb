@@ -14,7 +14,10 @@
         <p>No cocktails</p>
       <% else %>
         <% @doses.each do |dose| %>
-          <li class="list-group-item"><a href=''><%= dose.description %> | <%= dose.ingredient.name %></a></li>
+          <li class="list-group-item">
+          <a href=''><%= dose.description %> | <%= dose.ingredient.name %></a><%= link_to 'delete', "/doses/#{@cocktail.id}", :method => :delete %>
+          <%= image_tag "trash.png", alt: "Delete item", width: 20 %>
+          </li>
         <% end %>
       <% end %>
     </ul>
