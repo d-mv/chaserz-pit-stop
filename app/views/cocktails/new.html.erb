@@ -1,0 +1,18 @@
+<p></p>
+<div class='container'>
+  <div class='row'>
+    <%= simple_form_for [@cocktail] do |f| %>
+    <div class="form-group">
+      <%= f.label 'Cocktail name:' %>
+      <%= f.input_field :name, prompt: "enter new cocktail name", as: :string, class: 'form-control', :autofocus => true %>
+    </div>
+    <p></p>
+    <%= f.button :submit, "Create", class: "btn btn-primary" %>
+    <button type='button' class='btn btn-secondary' onclick="window.history.go(-1); return false;">Cancel</button>
+    <% end %>
+  </div>
+  <p></p>
+  <div class='row'>
+    <button type='button' class='btn btn-success' onclick="/">Add ingredient</button>
+  </div>
+</div>

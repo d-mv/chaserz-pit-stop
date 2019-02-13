@@ -1,0 +1,30 @@
+
+
+<p></p>
+<div class='container'>
+  <div class='row'>
+    <%= @cocktail.name %>
+  </div>
+  <a href='/cocktails/<%= @cocktail.id %>/add_ingredients' class='btn btn-primary'>Add more ingredients</a>
+  <%# list %>
+  <div class='row'>
+    <ul class="list-group">
+      <% if @doses.nil? %>
+        <p>No cocktails</p>
+      <% else %>
+        <% @doses.each do |dose| %>
+          <li class="list-group-item">
+            <a href=''>
+            <%= dose.description %> |
+            <% dose.ingredient.name %>
+            </a>
+              ------------------
+              <a href='/cocktails/<%=@cocktail.id%>/ingredient/<%=dose.id%>/delete'>
+              <i class="far fa-trash-alt"></i>
+              </a>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+</div>

@@ -57,6 +57,11 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'rspec-rails', group: [ :test ]
 gem 'rails-controller-testing', group: [ :test ]
-gem 'rspec-rails', group: [ :test ]
-gem 'rspec-rails', group: [ :test ]
-gem 'rails-controller-testing', group: [ :test ]
+
+# Bootstrap
+gem 'autoprefixer-rails'
+# gem 'bootstrap-sass', '~> 3.3.7'
+# gem 'font-awesome-sass', '~> 5.0.9'
+gem 'bootstrap-sass'
+gem 'font-awesome-sass'
+gem 'simple_form'

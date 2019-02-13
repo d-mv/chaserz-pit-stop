@@ -1,0 +1,20 @@
+<p></p>
+<div class='container'>
+  <div class='row'>
+    <a href='/cocktails/new' class='btn btn-primary'>Create a new cocktail</a>
+  </div>
+  <%# list %>
+  <div class='row'>
+    <ul class="list-group">
+      <% if @cocktails.nil? %>
+        <p>No cocktails</p>
+      <% else %>
+        <% @cocktails.each do |cocktail| %>
+          <li class="list-group-item"><a href='/cocktails/<%=cocktail.id%>'>
+            <%= cocktail.name %></a>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+</div>
