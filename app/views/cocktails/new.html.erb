@@ -6,6 +6,10 @@
       <%= f.label 'Cocktail name:' %>
       <%= f.input_field :name, prompt: "enter new cocktail name", as: :string, class: 'form-control', :autofocus => true %>
     </div>
+    <div class="form-group">
+      <%= f.label 'Cocktail photo URL:' %>
+      <%= f.input_field :photo, prompt: "add cocktail photo", as: :url, class: 'form-control' %>
+    </div>
     <p></p>
     <%= f.button :submit, "Create", class: "btn btn-primary" %>
     <button type='button' class='btn btn-secondary' onclick="window.history.go(-1); return false;">Cancel</button>

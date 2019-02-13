@@ -5,8 +5,10 @@
   <div class='row'>
     <h3><%= @cocktail.name %></h3>
   </div>
+  <%= image_tag(@cocktail.photo, alt: "Delete item", width: 20) %>
   <a href='/cocktails/<%= @cocktail.id %>/doses/new' class='btn btn-primary'>Add more ingredients</a>
   <button type='button' class='btn btn-secondary' onclick="window.history.go(-1); return false;">Go back</button>
+  <%= link_to image_tag("trash.png", alt: "Delete item", width: 20), "/cocktails/#{@cocktail.id}", :method => :delete %>
   <%# list %>
   <div class='row'>
     <ul class="list-group">
@@ -15,8 +17,7 @@
       <% else %>
         <% @doses.each do |dose| %>
           <li class="list-group-item">
-          <a href=''><%= dose.description %> | <%= dose.ingredient.name %></a><%= link_to 'delete', "/doses/#{@cocktail.id}", :method => :delete %>
-          <%= image_tag "trash.png", alt: "Delete item", width: 20 %>
+          <%= dose.description %> | <%= dose.ingredient.name %><%= link_to image_tag("trash.png", alt: "Delete item", width: 20), "/doses/#{dose.id}", :method => :delete %>
           </li>
         <% end %>
       <% end %>
