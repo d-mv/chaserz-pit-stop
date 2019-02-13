@@ -1,7 +1,7 @@
 <p></p>
 <div class='container'>
   <div class='row'>
-    <%= simple_form_for [@dose] do |f| %>
+    <%= simple_form_for [@cocktail, @dose] do |f| %>
     <div class="form-group">
       <%= f.label 'Ingredient description:' %>
       <%= f.input_field :description, prompt: "ex. 5ml", as: :string, class: 'form-control', :autofocus => true %>

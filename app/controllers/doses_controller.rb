@@ -2,17 +2,16 @@
 
 class DosesController < ApplicationController
 
-  def add_ingredients
-    @cocktail = Cocktail.find(params[:id])
-    @ingredients = Ingredient.all
+  def new
     @dose = Dose.new
+    @cocktail = Cocktail.find(params[:cocktail_id])
+    @ingredients = Ingredient.all
   end
 
   def create
     dose = Dose.new(dose_params)
     dose.cocktail_id = params[:cocktail_id]
     if dose.save
-      # redirect_to cocktail_path(params[:restaurant_id])
       puts 'dose.saved'
       redirect_to "/cocktails/#{params[:cocktail_id]}"
     else
