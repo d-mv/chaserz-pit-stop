@@ -1,26 +1,23 @@
-<a href='/cocktails/new' class='btn btn-primary'>Create a new cocktail</a>
+<div class="container">
+  <div class='row center-in-div'>
+    <%# list %>
+    <% if @cocktails.nil? %>
+    <p>No cocktails</p>
+    <% else %>
+    <% @cocktails.each do |cocktail| %>
 
-
-<div class="container-flex">
-  <div class="row">
-    <div class="col-sm-8 col-md-6 col-lg-8">
-      <%# <div class="row"> %>
-        <%# list %>
-        <% if @cocktails.nil? %>
-        <p>No cocktails</p>
-        <% else %>
-        <% @cocktails.each do |cocktail| %>
-          <div class="col-lg-4 col-md-6 col-sm-6">
-            <a href="/cocktails/<%=cocktail.id%>" class="zero-link-style">
-            <div class="card" style="background-image: url(<%= cocktail.photo %>)">
-              <div class='card-title'><%=cocktail.name%></div>
-            </div></a>
-            </div>
-        <% end %>
-
-        <% end %>
-
-      <%# </div> %>
+    <%# item %>
+    <div class='col-lg-4 col-md-4 col-sm-6 col-xs-12 center-in-div'>
+      <div class="card" id='<%= cocktail.id %>' style="background-image: url(<%= cocktail.photo %>)">
+        <div class='card-title closed'>
+          <%=cocktail.name%>
+        </div>
+      </div>
     </div>
+    <% end %>
+    <% end %>
   </div>
 </div>
+<footer>
+  <%= button_to 'CREATE A NEW COCKTAIL', new_cocktail_path, {class: 'button-main', method: :get} %>
+</footer>

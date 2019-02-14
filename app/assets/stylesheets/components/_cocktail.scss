@@ -1,0 +1,54 @@
+.cocktail-container {
+  width: 70%;
+}
+
+.list-group {
+  width: 100vw;
+}
+
+.cocktail-title {
+  color: white;
+  font-weight: 700;
+  font-size: 24pt;
+  padding: 40px;
+  text-align: center;
+}
+
+.destroy-icon {
+  height: 35px;
+  margin: 0;
+  padding: 5px;
+  transition: all .5s ease-in-out;
+}
+
+.destroy-icon:hover {
+  border-radius: 50%;
+  border: 1px solid #CF7C00;
+}
+
+.destroy-icon-link {
+  margin: 0;
+  height: 35px;
+}
+
+.list-group {
+  margin: 0;
+}
+
+.cocktail-image {
+  border-radius: 3px;
+  background-image: linear-gradient(#CF7C00, #FFC700);
+  border: 1px solid #CF7C00;
+  box-shadow: 1px 2px 4px #FFC700;
+  height: 300px;
+}
+
+.ingredients-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-content: baseline;
+  border: 1px solid #CF7C00;
+  background-image: linear-gradient(#F5F5F5, #E0E0E0);
+  box-shadow: 1px 2px 4px #FFC700;
+
+}

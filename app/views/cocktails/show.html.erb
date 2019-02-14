@@ -1,26 +1,38 @@
-
-
-<p></p>
-<div class='container'>
+<div class="container cocktail-container">
   <div class='row'>
-    <h3><%= @cocktail.name %></h3>
+    <div class='col-sm-12 center-in-div bottom-30'>
+      <div class='cocktail-title'>
+        <%= @cocktail.name %>
+      </div>
+    </div>
   </div>
-  <%= image_tag(@cocktail.photo, alt: "Delete item", width: 20) %>
-  <a href='/cocktails/<%= @cocktail.id %>/doses/new' class='btn btn-primary'>Add more ingredients</a>
-  <button type='button' class='btn btn-secondary' onclick="window.history.go(-1); return false;">Go back</button>
-  <%= link_to image_tag("trash.png", alt: "Delete item", width: 20), "/cocktails/#{@cocktail.id}", :method => :delete %>
-  <%# list %>
   <div class='row'>
-    <ul class="list-group">
-      <% if @doses.nil? %>
+    <div class='col-sm-10 col-md-6 center-in-div bottom-30'>
+      <%= image_tag(@cocktail.photo, alt: "Delete item", class: 'cocktail-image') %>
+    </div>
+    <div class='col-sm-10 col-md-6 center-in-div bottom-30'>
+      <%# list %>
+      <ul class="list-group">
+        <% if @doses.nil? %>
         <p>No cocktails</p>
-      <% else %>
+        <% else %>
         <% @doses.each do |dose| %>
-          <li class="list-group-item">
-          <%= dose.description %> | <%= dose.ingredient.name %><%= link_to image_tag("trash.png", alt: "Delete item", width: 20), "/doses/#{dose.id}", :method => :delete %>
-          </li>
+        <li class="list-group-item ingredients-list-item ingredients-list">
+          <div class='text'>
+            <%= dose.description %> of
+            <%= dose.ingredient.name %>
+          </div>
+          <%= link_to image_tag("trash.png", alt: "Delete item", class: 'destroy-icon'), "/doses/#{dose.id}", :method => :delete, class: 'destroy-icon-link' %>
+        </li>
         <% end %>
-      <% end %>
-    </ul>
+        <% end %>
+      </ul>
+    </div>
   </div>
+</div>
+<footer>
+  <div class='button-main' id='add'>ADD MORE INGREDIENTS</div>
+  <%= button_to 'delete', "/cocktails/#{@cocktail.id}", {class: 'button-secondary', :method => :delete} %>
+  <%= button_to 'return', "/", {class: 'button-secondary', method: :get} %>
+</footer>
 </div>
