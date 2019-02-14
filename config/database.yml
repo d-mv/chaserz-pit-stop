@@ -32,7 +32,7 @@ development:
   username: dmitry
 
   # The password associated with the postgres role (username).
-  # password: rails123
+  password: rails123
 
   # sudo service postgresql start
 

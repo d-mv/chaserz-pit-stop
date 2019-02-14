@@ -11,6 +11,19 @@ class CocktailsController < ApplicationController
     @cocktail = Cocktail.new
   end
 
+  def edit
+    @cocktail = Cocktail.find(params[:id])
+  end
+
+  def update
+    @cocktail = Cocktail.new(cocktail_params)
+    if @cocktail.save
+      redirect_to cocktails_path
+    else
+      redirect_back fallback_location: @cocktail
+    end
+  end
+
   def show
     @cocktail = Cocktail.find(params[:id])
     @doses = @cocktail.doses

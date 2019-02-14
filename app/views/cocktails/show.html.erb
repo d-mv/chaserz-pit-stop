@@ -33,6 +33,7 @@
 </div>
 <footer>
   <div class='button-main' id='add'>ADD MORE INGREDIENTS</div>
+  <%= button_to 'edit', "/cocktails/#{@cocktail.id}/edit", {class: 'button-secondary', :method => :delete} %>
   <%= button_to 'delete', "/cocktails/#{@cocktail.id}", {class: 'button-secondary', :method => :delete} %>
   <%= button_to 'return', "/", {class: 'button-secondary', method: :get} %>
 </footer>
