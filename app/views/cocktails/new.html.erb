@@ -1,19 +1,19 @@
-<p></p>
+<div class='spacer'></div>
 <div class='container'>
   <div class='row'>
     <%= simple_form_for [@cocktail] do |f| %>
-    <div class="form-group">
-      <%= f.label 'Cocktail name:', class: 'title' %>
-      <%= f.input_field :name, prompt: "enter new cocktail name", as: :string, class: 'form-control', :autofocus => true %>
-    </div>
-    <div class="form-group">
-      <%= f.label 'Cocktail photo URL:', class: 'title' %>
-      <%= f.input_field :photo, prompt: "add cocktail photo", as: :url, class: 'form-control' %>
-    </div>
-    <div class='center-in-div'>
-    <%= f.button :submit, "CREATE", class: "button-main" %>
-    <button type='button' class='button-secondary' onclick="window.history.go(-1); return false;">cancel</button>
-    </div>
+      <div class="form-group">
+        <%= f.label 'Cocktail name:', class: 'title' %>
+        <%= f.input_field :name, prompt: "enter new cocktail name", as: :string, class: 'form-control', :autofocus => true %>
+      </div>
+      <div class="form-group">
+        <%= f.label 'Cocktail photo URL:', class: 'title' %>
+        <%= f.input_field :photo, prompt: "add cocktail photo", as: :url, class: 'form-control' %>
+      </div>
+      <div class='center-in-div'>
+        <%= f.button :submit, "CREATE", class: "button-main" %>
+        <button type='button' class='button-secondary' onclick="window.history.go(-1); return false;">cancel</button>
+      </div>
     <% end %>
   </div>
 </div>

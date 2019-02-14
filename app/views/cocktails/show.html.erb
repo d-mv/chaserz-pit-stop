@@ -1,3 +1,4 @@
+<div class='spacer'></div>
 <div class="container cocktail-container">
   <div class='row'>
     <div class='col-sm-12 center-in-div bottom-30'>
@@ -14,17 +15,17 @@
       <%# list %>
       <ul class="list-group">
         <% if @doses.nil? %>
-        <p>No cocktails</p>
+          <p>No cocktails</p>
         <% else %>
-        <% @doses.each do |dose| %>
-        <li class="list-group-item ingredients-list-item ingredients-list">
-          <div class='text'>
-            <%= dose.description %> of
-            <%= dose.ingredient.name %>
-          </div>
-          <%= link_to image_tag("https://res.cloudinary.com/diciu4xpu/image/upload/v1550148703/bsfe67cpyozwxivqrbfi.png", alt: "Delete item", class: 'destroy-icon'), "/doses/#{dose.id}", :method => :delete, class: 'destroy-icon-link' %>
-        </li>
-        <% end %>
+          <% @doses.each do |dose| %>
+            <li class="list-group-item ingredients-list-item ingredients-list">
+              <div class='text'>
+                <%= dose.description %> of
+                <%= dose.ingredient.name %>
+              </div>
+              <%= link_to image_tag("https://res.cloudinary.com/diciu4xpu/image/upload/v1550148703/bsfe67cpyozwxivqrbfi.png", alt: "Delete item", class: 'destroy-icon'), "/doses/#{dose.id}", :method => :delete, class: 'destroy-icon-link' %>
+            </li>
+          <% end %>
         <% end %>
       </ul>
     </div>

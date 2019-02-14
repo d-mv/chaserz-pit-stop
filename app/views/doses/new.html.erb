@@ -1,31 +1,31 @@
-<p></p>
+<div class='spacer'></div>
 <div class='container'>
   <div class='row'>
     <%= simple_form_for [@cocktail, @dose] do |f| %>
-    <div class="form-group">
-      <%= f.label 'Ingredient description:', class: 'title' %>
-      <%= f.input_field :description, prompt: "ex. 5ml", as: :string, class: 'form-control', :autofocus => true %>
-    </div>
-    <div class="custom-control custom-radio">
-      <%= f.label 'Rating:', class: 'title' %>
-      <%= f.input_field :ingredient_id,  class: 'form-control', collection: @ingredients %>
-    </div>
-    <p></p>
-    <% if @dose.errors.any? %>
-    <div class="errors-container">
-      <ul>
-        <% @dose.errors.full_messages.each do |message| %>
-        <li class='text-danger'>
-          <%= message %>
-        </li>
-        <% end %>
-      </ul>
-    </div>
-    <% end %>
-    <div class='center-in-div'>
-      <%= hidden_field_tag :cocktail_id, @cocktail.id %>
-      <%= f.button :submit, "ADD INGREDIENT", class: "button-main" %>
-      <button type='button' class='button-secondary' onclick="window.history.go(-1); return false;">cancel</button>
+      <div class="form-group">
+        <%= f.label 'Ingredient description:', class: 'title' %>
+        <%= f.input_field :description, prompt: "ex. 5ml", as: :string, class: 'form-control', :autofocus => true %>
+      </div>
+      <div class="custom-control custom-radio">
+        <%= f.label 'Rating:', class: 'title' %>
+        <%= f.input_field :ingredient_id,  class: 'form-control', collection: @ingredients %>
+      </div>
+      <p></p>
+      <% if @dose.errors.any? %>
+        <div class="errors-container">
+          <ul>
+            <% @dose.errors.full_messages.each do |message| %>
+              <li class='text-danger'>
+                <%= message %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <div class='center-in-div'>
+        <%= hidden_field_tag :cocktail_id, @cocktail.id %>
+        <%= f.button :submit, "ADD INGREDIENT", class: "button-main" %>
+        <button type='button' class='button-secondary' onclick="window.history.go(-1); return false;">cancel</button>
       <% end %>
     </div>
   </div>

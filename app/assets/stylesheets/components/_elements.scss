@@ -8,16 +8,20 @@ footer {
   left: 0px;
   width: 100vw;
   padding: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 0;
+}
+
+.spacer {
+  padding: 50px;
 }
 
 body {
-  background-image: url('https://res.cloudinary.com/diciu4xpu/image/upload/v1550148661/tgpwpgpjuky7jiyeaeui.png');
-  /* Full height */
-  height: 100vh;
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: url(https://res.cloudinary.com/diciu4xpu/image/upload/v1550148661/tgpwpgpjuky7jiyeaeui.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: 100%;
   font-family: 'Jura', sans-serif;
 }
 
@@ -27,6 +31,10 @@ body {
 
 .zero-link-style:hover {
   transform: scale(1.3);
+}
+
+.zero-m {
+  margin: 0;
 }
 
 .center-in-div {
@@ -39,4 +47,3 @@ body {
 .bottom-30 {
   margin-bottom: 30px;
 }
-

@@ -1,21 +1,20 @@
+<div class='spacer'></div>
 <div class="container">
   <div class='row center-in-div'>
     <%# list %>
     <% if @cocktails.nil? %>
-    <p>No cocktails</p>
+      <p>No cocktails</p>
     <% else %>
-    <% @cocktails.each do |cocktail| %>
-    <%# item %>
-    <div class='col-lg-4 col-md-4 col-sm-6 col-xs-12 center-in-div'>
-
-      <div class="card" id='<%= cocktail.id %>' style="background-image: url(<%= cocktail.photo %>);background-color:#CF7C00;">
-        <div class='card-title closed'>
-          <%=cocktail.name%>
+      <% @cocktails.each do |cocktail| %>
+        <%# item %>
+        <div class='col-lg-3 col-md-4 col-sm-6 col-xs-12 center-in-div'>
+          <div class="card" id='<%= cocktail.id %>' style="background-image: url(<%= cocktail.photo %>);background-color:#CF7C00;">
+            <div class='card-title closed'>
+              <%=cocktail.name%>
+            </div>
+          </div>
         </div>
-      </div>
-
-    </div>
-    <% end %>
+      <% end %>
     <% end %>
   </div>
 </div>

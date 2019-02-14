@@ -1,18 +1,18 @@
 .card {
-  border-radius: 3px;
+  border-radius: 5px;
   background-size: cover;
   background-position: center;
   color: white;
   font-size: 50px;
   text-align: center;
   height: 300px;
-  width: 350px;
+  width: 250px;
   font-size: 20pt;
   display: flex;
   align-content: flex-end;
   justify-content: flex-start;
   filter: grayscale(50%);
-  box-shadow: 1px 2px 4px #FFC700;
+  box-shadow: 1px 2px 5px #FFC700;
   border: 1px solid #CF7C00;
   margin: 10px 0;
   transition: all .5s ease-in-out;
@@ -26,7 +26,7 @@
 .card-title {
   overflow-y: hidden;
   max-height: 80px;
-  height: 40px;
+  height: 35px;
   /* approximate max height */
   transition-property: all;
   transition-duration: .7s;
@@ -35,10 +35,10 @@
   font-size: 16pt;
   font-weight: 700;
   text-align: left;
-  padding: 5px;
+  // padding: 5px;
   margin-bottom: 10px;
   color: white;
-  width: 350px;
+  width: 250px;
   background-image: linear-gradient(#CF7C00, #FFC700);
 }
 
