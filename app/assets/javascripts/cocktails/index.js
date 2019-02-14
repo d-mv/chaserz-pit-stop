@@ -1,6 +1,8 @@
 
 const cards = document.querySelectorAll('div.card')
-console.log(cards)
+console.log(cards[0])
+
+// cards[0].children[0].classList.toggle('closed')
 
 cards.forEach((button) => {
   button.addEventListener('click', (event) => {
@@ -17,4 +19,6 @@ cards.forEach((button) => {
     button.children[0].classList.toggle('closed')
   })
 });
+
+
 
