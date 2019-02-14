@@ -16,11 +16,17 @@ class CocktailsController < ApplicationController
   end
 
   def update
+    byebug
     @cocktail = Cocktail.new(cocktail_params)
+    # byebug
+#     uploader = PhotoUploader.new
+#     uploader.store!(my_file)
+
+# uploader.retrieve_from_store!('my_file.png')
     if @cocktail.save
       redirect_to cocktails_path
     else
-      redirect_back fallback_location: @cocktail
+      redirect_to  fallback_location: @cocktail
     end
   end
 
