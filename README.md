@@ -1,24 +1,5 @@
-# README
+# Chaserz Pit-Stop
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Cocktail bar app. Made as a study project using the [Chaserz](https://github.com/d-mv/chaserz) pre-release theme.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+*Doesn't work in Firefox*
